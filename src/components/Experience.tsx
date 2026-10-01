@@ -6,56 +6,78 @@ export function Experience() {
   const timeline = [
     {
       type: 'work',
-      title: 'Associate Full-Stack Developer',
-      organization: 'Hyperdim Innovation (Pvt) Ltd',
-      location: 'Colombo, Sri Lanka',
-      period: '2024 - Present',
-      description: 'Leading full-stack development projects using modern technologies and frameworks.',
+      title: 'Junior Full-Stack Developer',
+      organization: 'Hyperdim Innovation (Pte) Ltd',
+      location: 'Singapore (Remote)',
+      period: 'Aug 2025 – Present',
+      description: 'Building and maintaining multiple production-grade full-stack platforms for a Singapore-based tech company.',
       achievements: [
-        'Developed and maintained enterprise web applications using React and TypeScript',
-        'Integrated AI-powered features to enhance user experience',
-        'Collaborated with cross-functional teams in Agile environment',
-        'Implemented responsive designs and optimized application performance'
+        'Developed InvoiceX — a full-stack invoice management platform (React, Node.js, Express, Firebase, SQLite, Docker) deployed on Google Cloud Run',
+        'Built e-Kitchen E-commerce connecting 60+ local farmers to customers (React, TypeScript, FastAPI, MSSQL, Google OAuth)',
+        'Designed and developed the Velora Elders-care Website with accessibility-first approach (React, TypeScript, CSS)',
+        'Contributed to Ceylon My Dream tourist management system (React, TypeScript, Python)',
+        'Led development of the official Hyperdim-Innovations website with AI Agent integration, deployed on Google Cloud'
       ],
-      technologies: ['React', 'TypeScript', 'Node.js', 'AI Integration', 'Tailwind CSS']
+      technologies: ['React', 'TypeScript', 'Node.js', 'FastAPI', 'Docker', 'Firebase', 'Google Cloud', 'AI Integration']
     },
     {
       type: 'work',
-      title: 'MERN Stack Intern',
+      title: 'Intern Software Engineer',
       organization: 'SLT Mobitel',
-      location: 'Sri Lanka',
-      period: '2023 - 2024 (6 months)',
-      description: 'Gained hands-on experience in full-stack web development with MERN stack.',
+      location: 'Colombo, Sri Lanka',
+      period: 'Feb 2025 – Aug 2025',
+      description: 'Developed the official MySLT Web Portal to improve customer experience and engagement for Sri Lanka\'s national telecom provider.',
       achievements: [
-        'Contributed to the development of My SLT web portal',
-        'Worked with React and TypeScript for frontend development',
-        'Collaborated with senior developers on feature implementation',
-        'Learned industry best practices and coding standards'
+        'Developed the official MySLT Web Portal for improved user experience and customer engagement',
+        'Utilized React and TypeScript for frontend development with modern component architecture',
+        'Collaborated with backend teams for seamless API integration',
+        'Learned industry-grade coding standards and enterprise workflows'
       ],
-      technologies: ['React', 'TypeScript', 'MongoDB', 'Express.js', 'Node.js']
+      technologies: ['React', 'TypeScript', 'REST APIs', 'Responsive Design']
+    },
+    {
+      type: 'education',
+      title: 'MSc in Artificial Intelligence',
+      organization: 'Kingston University',
+      location: 'London, United Kingdom',
+      period: '2026 (Reading)',
+      description: 'Currently reading for a Master\'s degree in Artificial Intelligence, deepening expertise in ML, deep learning, and AI-powered application development.',
+      achievements: [
+        'Focus on machine learning, neural networks, and AI system design',
+        'Applying AI knowledge to real-world projects (Google Gemini integration in MentorXync)',
+        'Bridging AI theory with full-stack engineering practice'
+      ],
+      technologies: ['Machine Learning', 'Deep Learning', 'Python', 'Data Science', 'AI Systems']
     },
     {
       type: 'education',
       title: 'Bachelor of Information Technology (Hons)',
       organization: 'ESOFT Metro Campus',
-      location: 'Colombo, Sri Lanka',
-      period: '2021 - Present',
-      description: 'Specializing in Software Engineering',
+      location: 'Bambalapitiya, Sri Lanka',
+      period: '2021 – 2026',
+      description: 'Specializing in Software Engineering. Completed all coursework; awaiting graduation.',
       achievements: [
-        'Focus on modern software development practices',
-        'Hands-on projects in web and mobile development',
-        'Study of algorithms, data structures, and system design',
-        'Active participation in academic projects and presentations'
+        'Relevant coursework: OOP, System Analysis & Design, Web Application Development',
+        'Cloud Application Development, Database Systems, Agile Software Development',
+        'Data Structures & Algorithms, Advanced Web Technologies, AI, Data Science',
+        'Hands-on projects in web, mobile, and cloud development'
       ],
-      technologies: ['Software Engineering', 'Web Development', 'Database Management', 'System Design']
+      technologies: ['Software Engineering', 'Web Development', 'Cloud Computing', 'Data Science']
+    },
+    {
+      type: 'education',
+      title: 'Diploma in Information Technology',
+      organization: 'ESOFT Metro Campus',
+      location: 'Bambalapitiya, Sri Lanka',
+      period: '2020',
+      description: 'Foundation diploma covering core IT disciplines and programming fundamentals.',
+      achievements: [
+        'Fundamentals of Programming, Computer Systems, OOP, Database Systems',
+        'Web Application Development, Cloud Application Development',
+        'IT Infrastructure and Agile Software Development'
+      ],
+      technologies: ['Programming Fundamentals', 'Databases', 'Web Development', 'IT Infrastructure']
     }
-  ];
-
-  const goals = [
-    'Master advanced React patterns and architecture',
-    'Contribute to open-source projects',
-    'Build scalable cloud-native applications',
-    'Mentor junior developers and share knowledge'
   ];
 
   return (
@@ -66,130 +88,97 @@ export function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-6xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           <div className="text-center mb-12">
             <h2 className="text-white mb-4">Experience & Education</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6" />
             <p className="text-gray-300 max-w-2xl mx-auto">
-              My professional journey and continuous learning path
+              My professional journey — from Sri Lanka to Singapore and the UK
             </p>
           </div>
 
           {/* Timeline */}
           <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-600" />
+            {/* Vertical line */}
+            <div className="absolute left-6 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-purple-600" />
 
-            <div className="space-y-12">
+            <div className="space-y-10">
               {timeline.map((item, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className={`relative flex items-center ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  } flex-col md:gap-8`}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="relative pl-16 md:pl-20"
                 >
                   {/* Timeline dot */}
-                  <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transform -translate-x-1/2 z-10 ring-4 ring-gray-800" />
-
-                  {/* Content card */}
-                  <div className="w-full md:w-5/12 ml-16 md:ml-0">
-                    <div className="glass-effect rounded-2xl p-6 border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
-                      {/* Header */}
-                      <div className="flex items-start gap-3 mb-4">
-                        <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
-                          item.type === 'work' 
-                            ? 'bg-blue-500/20' 
-                            : 'bg-purple-500/20'
-                        }`}>
-                          {item.type === 'work' ? (
-                            <Briefcase className="text-blue-400" size={24} />
-                          ) : (
-                            <GraduationCap className="text-purple-400" size={24} />
-                          )}
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-white mb-1">{item.title}</h3>
-                          <p className="text-blue-400 mb-2">{item.organization}</p>
-                          <div className="flex flex-wrap gap-3 text-sm text-gray-400">
-                            <span className="flex items-center gap-1">
-                              <Calendar size={14} />
-                              {item.period}
-                            </span>
-                            <span className="flex items-center gap-1">
-                              <MapPin size={14} />
-                              {item.location}
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Description */}
-                      <p className="text-gray-300 mb-4">{item.description}</p>
-
-                      {/* Achievements */}
-                      <ul className="space-y-2 mb-4">
-                        {item.achievements.map((achievement, i) => (
-                          <li key={i} className="flex items-start gap-2 text-gray-400 text-sm">
-                            <ArrowRight className="text-blue-400 flex-shrink-0 mt-0.5" size={16} />
-                            <span>{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
-
-                      {/* Technologies */}
-                      <div className="flex flex-wrap gap-2">
-                        {item.technologies.map((tech) => (
-                          <Badge
-                            key={tech}
-                            variant="secondary"
-                            className="bg-gray-700 text-blue-400 hover:bg-blue-500/20 transition-colors"
-                          >
-                            {tech}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
+                  <div className={`absolute left-6 md:left-8 w-5 h-5 rounded-full transform -translate-x-1/2 z-10 ring-4 ring-gray-800 flex items-center justify-center ${
+                    item.type === 'work' ? 'bg-blue-500' : 'bg-purple-500'
+                  }`}>
+                    {item.type === 'work' ? (
+                      <Briefcase size={10} className="text-white" />
+                    ) : (
+                      <GraduationCap size={10} className="text-white" />
+                    )}
                   </div>
 
-                  {/* Empty space for alternating layout */}
-                  <div className="hidden md:block w-5/12" />
+                  {/* Content card */}
+                  <div className="glass-effect rounded-2xl p-6 border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
+                    {/* Header */}
+                    <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
+                      <div>
+                        <h3 className="text-white text-lg mb-0.5">{item.title}</h3>
+                        <p className="text-blue-400">{item.organization}</p>
+                      </div>
+                      <div className={`px-3 py-1 rounded-full text-xs border ${
+                        item.type === 'work'
+                          ? 'bg-blue-500/10 border-blue-500/30 text-blue-300'
+                          : 'bg-purple-500/10 border-purple-500/30 text-purple-300'
+                      }`}>
+                        {item.type === 'work' ? 'Work' : 'Education'}
+                      </div>
+                    </div>
+
+                    <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-3">
+                      <span className="flex items-center gap-1">
+                        <Calendar size={13} />
+                        {item.period}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <MapPin size={13} />
+                        {item.location}
+                      </span>
+                    </div>
+
+                    <p className="text-gray-300 text-sm mb-4">{item.description}</p>
+
+                    <ul className="space-y-1.5 mb-4">
+                      {item.achievements.map((achievement, i) => (
+                        <li key={i} className="flex items-start gap-2 text-gray-400 text-sm">
+                          <ArrowRight className="text-blue-400 flex-shrink-0 mt-0.5" size={14} />
+                          <span>{achievement}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="flex flex-wrap gap-2">
+                      {item.technologies.map((tech) => (
+                        <Badge
+                          key={tech}
+                          variant="secondary"
+                          className="bg-gray-700 text-blue-400 text-xs hover:bg-blue-500/20 transition-colors"
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </div>
           </div>
-
-          {/* Career Goals */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mt-16 glass-effect rounded-2xl p-8 border border-gray-700"
-          >
-            <h3 className="text-white mb-6 text-center">Career Goals</h3>
-            <div className="grid md:grid-cols-2 gap-4">
-              {goals.map((goal, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-start gap-3 bg-gray-800/50 p-4 rounded-lg"
-                >
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-white text-xs">{index + 1}</span>
-                  </div>
-                  <p className="text-gray-300">{goal}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>

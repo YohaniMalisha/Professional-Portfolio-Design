@@ -1,13 +1,30 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Github, Linkedin, Mail, Download, ChevronDown, Code2, Briefcase, Cpu } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, ChevronDown, Code2, Briefcase, FolderGit2 } from 'lucide-react';
 import { Button } from './ui/button';
 import { ProfileImage } from './ProfileImage';
 
+const roles = [
+  'Junior Full-Stack Developer',
+  'React & TypeScript Expert',
+  'UI/UX Designer',
+  'AI Integration Specialist'
+];
+
 export function Hero() {
+  const [roleIndex, setRoleIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+    }, 2800);
+    return () => clearInterval(interval);
+  }, []);
+
   const stats = [
     { icon: Briefcase, label: 'Experience', value: '2+ Years' },
-    { icon: Code2, label: 'Projects', value: '15+' },
-    { icon: Cpu, label: 'Technologies', value: '20+' }
+    { icon: FolderGit2, label: 'Projects', value: '16+' },
+    { icon: Code2, label: 'Technologies', value: '25+' }
   ];
 
   return (
@@ -17,6 +34,8 @@ export function Hero() {
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-600/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }} />
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
@@ -34,10 +53,7 @@ export function Hero() {
             className="mb-8 flex justify-center"
           >
             <div className="relative group">
-              {/* Gradient border effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-500 to-purple-600 rounded-full blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-300 animate-pulse-glow" />
-              
-              {/* Image container */}
               <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-gray-900 bg-gray-800">
                 <ProfileImage
                   src="/assets/profile.jpg"
@@ -46,25 +62,35 @@ export function Hero() {
                   className="w-full h-full transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
-              
-              {/* Decorative rings */}
               <div className="absolute -inset-4 border-2 border-blue-500/20 rounded-full animate-float" />
               <div className="absolute -inset-8 border border-purple-500/10 rounded-full animate-float" style={{ animationDelay: '1s' }} />
+              {/* Available badge */}
+              <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs px-3 py-1 rounded-full flex items-center gap-1 shadow-lg">
+                <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
+                Open to Work
+              </div>
             </div>
           </motion.div>
 
-          {/* Tag */}
+          {/* Animated role tag */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="mb-6"
+            className="mb-6 h-10 flex items-center justify-center"
           >
-            <span className="inline-block px-6 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/50 rounded-full text-blue-300 backdrop-blur-sm">
-              Associate Full-Stack Developer
-            </span>
+            <motion.span
+              key={roleIndex}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.4 }}
+              className="inline-block px-6 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/50 rounded-full text-blue-300 backdrop-blur-sm"
+            >
+              {roles[roleIndex]}
+            </motion.span>
           </motion.div>
-          
+
           {/* Name */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -77,18 +103,17 @@ export function Hero() {
               Yohani Wimalasena
             </span>
           </motion.h1>
-          
-          {/* Professional tagline */}
+
+          {/* Tagline */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
             className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Crafting exceptional digital experiences with modern web technologies. 
-            Passionate about creating responsive, user-friendly applications using React, TypeScript, and modern development practices.
+            Junior Full-Stack Developer at <span className="text-blue-400">Hyperdim Innovation, Singapore</span> — building scalable web platforms with React, Node.js, and AI integrations. MSc AI candidate at Kingston University, UK.
           </motion.p>
-          
+
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -115,7 +140,7 @@ export function Hero() {
               </a>
             </Button>
           </motion.div>
-          
+
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -139,7 +164,7 @@ export function Hero() {
               </motion.div>
             ))}
           </motion.div>
-          
+
           {/* Social Links */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -172,7 +197,7 @@ export function Hero() {
           </motion.div>
         </motion.div>
       </div>
-      
+
       {/* Scroll indicator */}
       <motion.div
         animate={{ y: [0, 10, 0] }}
