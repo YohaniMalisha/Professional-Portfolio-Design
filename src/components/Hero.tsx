@@ -23,7 +23,7 @@ export function Hero() {
 
   const stats = [
     { icon: Briefcase, label: 'Experience', value: '2+ Years' },
-    { icon: FolderGit2, label: 'Projects', value: '16+' },
+    { icon: FolderGit2, label: 'Projects', value: '18+' },
     { icon: Code2, label: 'Technologies', value: '25+' }
   ];
 

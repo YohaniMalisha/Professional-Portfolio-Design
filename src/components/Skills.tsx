@@ -29,19 +29,23 @@ export function Skills() {
       { name: 'Next.js', level: 82 },
       { name: 'JavaScript', level: 92 },
       { name: 'HTML5 & CSS3', level: 95 },
-      { name: 'Tailwind CSS', level: 90 }
+      { name: 'Tailwind CSS', level: 90 },
+      { name: 'Vite', level: 84 },
+      { name: 'React Router', level: 86 }
     ],
     backend: [
       { name: 'Node.js & Express', level: 86 },
-      { name: 'Python / FastAPI', level: 80 },
+      { name: 'Python / FastAPI', level: 82 },
       { name: 'Python / Django', level: 75 },
       { name: 'PHP', level: 68 },
       { name: 'C# (.NET)', level: 72 },
       { name: 'Java', level: 74 },
+      { name: 'PostgreSQL', level: 80 },
       { name: 'MySQL & MSSQL', level: 82 },
       { name: 'MongoDB', level: 80 },
       { name: 'Firebase', level: 82 },
-      { name: 'SQLite', level: 78 }
+      { name: 'SQLite', level: 78 },
+      { name: 'Jinja2 & pywebview', level: 74 }
     ],
     devops: [
       { name: 'Docker', level: 80 },
@@ -50,7 +54,8 @@ export function Skills() {
       { name: 'GitHub Actions (CI/CD)', level: 78 },
       { name: 'Jenkins', level: 68 },
       { name: 'Git / GitHub / Bitbucket', level: 90 },
-      { name: 'REST APIs', level: 92 }
+      { name: 'REST APIs', level: 92 },
+      { name: 'PyInstaller & pytest', level: 76 }
     ],
     design: [
       { name: 'Figma', level: 90 },
@@ -71,10 +76,10 @@ export function Skills() {
   };
 
   const techBadges = {
-    languages: ['JavaScript', 'TypeScript', 'Python', 'C#', 'Java', 'PHP'],
-    frameworks: ['React.js', 'Next.js', 'Node.js', 'Express', 'FastAPI', 'Django'],
+    languages: ['JavaScript', 'TypeScript', 'Python', 'C#', 'Java', 'PHP', 'SQL', 'HTML', 'CSS'],
+    frameworks: ['React.js', 'Next.js', 'Node.js', 'Express', 'FastAPI', 'Django', 'Vite', 'React Router', 'Jinja2', 'pywebview'],
     databases: ['MongoDB', 'MySQL', 'MSSQL', 'Firebase', 'SQLite', 'PostgreSQL'],
-    tools: ['Docker', 'Git', 'GitHub Actions', 'Jenkins', 'Google Cloud', 'AWS', 'Figma']
+    tools: ['Docker', 'Git', 'GitHub Actions', 'Jenkins', 'Google Cloud', 'AWS', 'Figma', 'PyInstaller', 'pytest', 'phpMyAdmin']
   };
 
   const certifications = [

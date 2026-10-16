@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ExternalLink, Github, Star, ChevronDown, ChevronUp } from 'lucide-react';
+import { ExternalLink, Star, ChevronDown, ChevronUp } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -19,6 +19,28 @@ type Project = {
 };
 
 const allProjects: Project[] = [
+  {
+    title: 'HyperInspect Pro — Field Inspection Platform',
+    description: 'Multi-tenant enterprise field inspection platform with mission-based inspector coordination, role-based access, JWT auth, billing, map-based missions, and GitHub Actions CI/CD. FastAPI backend with React 19 frontend deployed via Docker.',
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWVsZCUyMGluc3BlY3Rpb258ZW58MXx8fHwxNzYxNTQ5MDY5fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    tags: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS', 'FastAPI', 'PostgreSQL', 'JWT', 'Docker', 'GitHub Actions'],
+    category: 'Full-Stack',
+    year: 2026,
+    featured: true,
+    github: '#',
+    demo: '#'
+  },
+  {
+    title: 'HyperGeo-AGS — Geotechnical Data Viewer',
+    description: 'Offline Windows desktop app for geotechnical engineers to view, print, and export AGS3/AGS4 ground-investigation data. Includes a custom AGS parser, SQLite cache, AGS4 builder with validation, and AI-powered suggestions.',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwdmlzdWFsaXphdGlvbnxlbnwxfHx8fDE3NjE1NDkwNjl8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    tags: ['Python', 'FastAPI', 'pywebview', 'SQLite', 'Jinja2', 'Vanilla JS', 'PyInstaller', 'pytest'],
+    category: 'Desktop',
+    year: 2026,
+    featured: true,
+    github: '#',
+    demo: '#'
+  },
   {
     title: 'MentorXync — AI Coaching Platform',
     description: 'AI-powered coaching platform for mentors and students with course creation, enrollment, session-based learning, Google Gemini AI suggestions, JWT auth, and Stripe/HitPay payments. Deployed on Google Cloud Run via Docker.',
@@ -315,17 +337,6 @@ export function Projects() {
                       </div>
                     </CardContent>
                     <CardFooter className="flex gap-2 pt-0">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-700 hover:border-blue-500 text-xs"
-                        asChild
-                      >
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
-                          <Github className="mr-1" size={14} />
-                          Code
-                        </a>
-                      </Button>
                       <Button
                         size="sm"
                         className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-xs"

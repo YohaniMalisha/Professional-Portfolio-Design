@@ -12,13 +12,16 @@ export function Experience() {
       period: 'Aug 2025 – Present',
       description: 'Building and maintaining multiple production-grade full-stack platforms for a Singapore-based tech company.',
       achievements: [
-        'Developed InvoiceX — a full-stack invoice management platform (React, Node.js, Express, Firebase, SQLite, Docker) deployed on Google Cloud Run',
-        'Built e-Kitchen E-commerce connecting 60+ local farmers to customers (React, TypeScript, FastAPI, MSSQL, Google OAuth)',
-        'Designed and developed the Velora Elders-care Website with accessibility-first approach (React, TypeScript, CSS)',
-        'Contributed to Ceylon My Dream tourist management system (React, TypeScript, Python)',
-        'Led development of the official Hyperdim-Innovations website with AI Agent integration, deployed on Google Cloud'
+        'HyperGeo-AGS (2026) — Offline Windows app for geotechnical engineers to view, print & export AGS3/AGS4 data; custom AGS parser, SQLite cache, and AI suggestions (Python, FastAPI, pywebview, SQLite, Jinja2, PyInstaller, pytest)',
+        'HyperInspect Pro (2026) — Multi-tenant field inspection platform with JWT auth, map-based missions, billing, and GitHub Actions CI/CD (React 19, TypeScript, Vite, FastAPI, PostgreSQL, Docker)',
+        'MentorXync (2026) — AI-powered coaching platform with Gemini-assisted mentor replies, Stripe/HitPay payments, and Docker deployment on Google Cloud Run (Next.js, TypeScript, FastAPI, PostgreSQL)',
+        'InvoiceX (2026) — Full-stack invoice management platform with real-time sync, Firebase auth, deployed on Google Cloud Run (React, Node.js, Express, SQLite, Docker)',
+        'Official Hyperdim website (2025) — Company website with AI customer-service agent, deployed on Google Cloud (React, TypeScript, Tailwind CSS)',
+        'e-Kitchen (2025) — E-commerce platform linking 60+ local farmers to customers with Google OAuth (React, TypeScript, FastAPI, MSSQL)',
+        'Ceylon My Dream (2025) — Tourist management system for bookings and tours (React, TypeScript, Python)',
+        'Velora Elders-care Website (2025) — Accessible, easy-to-navigate elder-care website (React, TypeScript, CSS)'
       ],
-      technologies: ['React', 'TypeScript', 'Node.js', 'FastAPI', 'Docker', 'Firebase', 'Google Cloud', 'AI Integration']
+      technologies: ['React', 'Next.js', 'TypeScript', 'Node.js', 'FastAPI', 'Python', 'PostgreSQL', 'Docker', 'Firebase', 'Google Cloud', 'AI Integration', 'pytest']
     },
     {
       type: 'work',
