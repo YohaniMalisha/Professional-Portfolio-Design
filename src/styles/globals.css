@@ -397,3 +397,10 @@ html {
   background: linear-gradient(to right, #2563eb, #9333ea);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
 }
+
+/* Utilities missing from the prebuilt Tailwind file */
+.justify-end { justify-content: flex-end; }
+.text-green-400 { color: #4ade80; }
+.text-red-400 { color: #f87171; }
+.animate-spin { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }

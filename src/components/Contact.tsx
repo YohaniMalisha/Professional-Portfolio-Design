@@ -1,11 +1,17 @@
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Linkedin, Github, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github, Send, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { useState } from 'react';
 
+// Free key from https://web3forms.com (enter your email, they send you the key).
+// It is a public key, safe to keep in front-end code. Leave empty to fall back to the visitor's email app.
+const WEB3FORMS_ACCESS_KEY = '';
+const CONTACT_EMAIL = 'wmalishawimalasena@gmail.com';
+
 export function Contact() {
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -49,10 +55,38 @@ export function Contact() {
     }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
-    console.log('Form submitted:', formData);
+
+    if (!WEB3FORMS_ACCESS_KEY) {
+      const body = `${formData.message}
+
+From: ${formData.name} <${formData.email}>`;
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(body)}`;
+      return;
+    }
+
+    setStatus('sending');
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          from_name: 'Portfolio Contact Form'
+        })
+      });
+      const data = await res.json();
+      if (!res.ok || !data.success) throw new Error(data.message);
+      setStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch {
+      setStatus('error');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -216,11 +250,26 @@ export function Contact() {
                 </div>
                 <Button
                   type="submit"
+                  disabled={status === 'sending'}
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
                 >
-                  <Send className="mr-2" size={18} />
-                  Send Message
+                  {status === 'sending' ? (
+                    <Loader2 className="mr-2 animate-spin" size={18} />
+                  ) : (
+                    <Send className="mr-2" size={18} />
+                  )}
+                  {status === 'sending' ? 'Sending...' : 'Send Message'}
                 </Button>
+                {status === 'success' && (
+                  <p role="status" className="flex items-center gap-2 text-sm text-green-400">
+                    <CheckCircle2 size={16} /> Thanks! Your message was sent. I'll get back to you soon.
+                  </p>
+                )}
+                {status === 'error' && (
+                  <p role="alert" className="flex items-center gap-2 text-sm text-red-400">
+                    <AlertCircle size={16} /> Something went wrong. Please try again or email me directly.
+                  </p>
+                )}
               </form>
             </motion.div>
           </div>

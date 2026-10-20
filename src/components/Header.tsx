@@ -31,11 +31,7 @@ export function Header() {
       }`}
     >
       <nav className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <a href="#home" className="text-xl bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-            Yohani.dev
-          </a>
-
+        <div className="flex items-center justify-end">
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
