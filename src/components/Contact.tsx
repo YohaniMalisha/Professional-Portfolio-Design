@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 // Free key from https://web3forms.com (enter your email, they send you the key).
 // It is a public key, safe to keep in front-end code. Leave empty to fall back to the visitor's email app.
-const WEB3FORMS_ACCESS_KEY = '';
+const WEB3FORMS_ACCESS_KEY = '60efbbf7-0974-4cd3-82d9-a7045bde434c';
 const CONTACT_EMAIL = 'wmalishawimalasena@gmail.com';
 
 export function Contact() {
