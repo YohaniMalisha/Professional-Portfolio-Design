@@ -56,8 +56,8 @@ const timeline = [
     title: 'Bachelor of Information Technology (Hons)',
     organization: 'ESOFT Metro Campus',
     location: 'Bambalapitiya, Sri Lanka',
-    period: '2021 – 2026',
-    description: 'Specializing in Software Engineering. Completed all coursework; awaiting graduation.',
+    period: '2021 – 2026 (Graduated)',
+    description: 'Specialized in Software Engineering. Graduated with a Bachelor of Information Technology (Hons).',
     achievements: [
       'Relevant coursework: OOP, System Analysis & Design, Web Application Development',
       'Cloud Application Development, Database Systems, Agile Software Development',

@@ -78,7 +78,7 @@ export function About() {
                 </p>
                 <p className="text-gray-300 text-lg leading-relaxed">
                   I hold a <span className="text-blue-400">Bachelor of Information Technology (Hons)</span> from
-                  ESOFT Metro Campus (coursework completed, awaiting graduation) and am currently reading for
+                  ESOFT Metro Campus (graduated) and am currently reading for
                   an <span className="text-purple-400">MSc in Artificial Intelligence</span> at Kingston
                   University, UK. My work bridges modern frontend (React, TypeScript, Next.js) with robust
                   backends (Node.js, FastAPI, Express) and cloud infrastructure (Docker, Google Cloud, AWS).

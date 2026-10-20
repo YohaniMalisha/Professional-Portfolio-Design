@@ -56,7 +56,7 @@ export function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-500 to-purple-600 rounded-full blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-300 animate-pulse-glow" />
               <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-gray-900 bg-gray-800">
                 <ProfileImage
-                  src="/assets/profile.jpg"
+                  src={`${import.meta.env.BASE_URL}assets/profile.jpg`}
                   alt="K.D Yohani Malisha Wimalasena"
                   initials="YW"
                   className="w-full h-full transition-transform duration-300 group-hover:scale-110"
