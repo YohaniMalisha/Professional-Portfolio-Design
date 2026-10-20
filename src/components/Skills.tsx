@@ -144,13 +144,9 @@ export function Skills() {
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`h-11 px-5 rounded-full inline-flex items-center justify-center gap-2 whitespace-nowrap leading-none text-sm font-medium transition-all duration-300 border focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/60 ${
-                  activeCategory === category.id
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white border-transparent shadow-md shadow-blue-500/20'
-                    : 'bg-gray-800 text-gray-300 border-gray-700 hover:bg-gray-700 hover:border-gray-600'
-                }`}
+                className={`pill-tab ${activeCategory === category.id ? 'pill-tab-active' : ''}`}
               >
-                <category.icon size={16} className="shrink-0" />
+                <category.icon size={16} />
                 <span>{category.label}</span>
               </button>
             ))}
