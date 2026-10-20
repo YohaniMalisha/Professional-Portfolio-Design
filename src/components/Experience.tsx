@@ -114,16 +114,14 @@ export function Experience() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative pl-16 md:pl-20"
+                  className="timeline-entry"
                 >
                   {/* Timeline dot */}
-                  <div className={`absolute left-6 md:left-8 w-5 h-5 rounded-full transform -translate-x-1/2 z-10 ring-4 ring-gray-800 flex items-center justify-center ${
-                    item.type === 'work' ? 'bg-blue-500' : 'bg-purple-500'
-                  }`}>
+                  <div className={`timeline-dot ${item.type === 'work' ? 'timeline-dot-work' : 'timeline-dot-edu'}`}>
                     {item.type === 'work' ? (
-                      <Briefcase size={10} className="text-white" />
+                      <Briefcase size={14} className="text-white" />
                     ) : (
-                      <GraduationCap size={10} className="text-white" />
+                      <GraduationCap size={14} className="text-white" />
                     )}
                   </div>
 

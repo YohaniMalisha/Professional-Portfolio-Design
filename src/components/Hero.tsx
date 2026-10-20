@@ -50,7 +50,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="mb-8 flex justify-center"
+            className="mb-14 flex justify-center"
           >
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-500 to-purple-600 rounded-full blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-300 animate-pulse-glow" />
@@ -64,11 +64,6 @@ export function Hero() {
               </div>
               <div className="absolute -inset-4 border-2 border-blue-500/20 rounded-full animate-float" />
               <div className="absolute -inset-8 border border-purple-500/10 rounded-full animate-float" style={{ animationDelay: '1s' }} />
-              {/* Available badge */}
-              <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs px-3 py-1 rounded-full flex items-center gap-1 shadow-lg">
-                <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
-                Open to Work
-              </div>
             </div>
           </motion.div>
 
