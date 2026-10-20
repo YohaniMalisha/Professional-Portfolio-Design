@@ -6,9 +6,10 @@ interface ProfileImageProps {
   alt: string;
   initials?: string;
   className?: string;
+  objectPosition?: string;
 }
 
-export function ProfileImage({ src, alt, initials = 'YW', className = '' }: ProfileImageProps) {
+export function ProfileImage({ src, alt, initials = 'YW', className = '', objectPosition = 'center' }: ProfileImageProps) {
   const [imageError, setImageError] = useState(false);
   const [imageLoading, setImageLoading] = useState(true);
 
@@ -39,6 +40,7 @@ export function ProfileImage({ src, alt, initials = 'YW', className = '' }: Prof
         <img
           src={src}
           alt={alt}
+          style={{ objectPosition }}
           className={`w-full h-full object-cover transition-opacity duration-300 ${
             imageLoading ? 'opacity-0' : 'opacity-100'
           }`}

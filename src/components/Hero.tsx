@@ -59,6 +59,7 @@ export function Hero() {
                   src={`${import.meta.env.BASE_URL}assets/${encodeURIComponent("WhatsApp Image 2026-09-16 at 15.04.12.jpeg")}`}
                   alt="K.D Yohani Malisha Wimalasena"
                   initials="YW"
+                  objectPosition="50% 22%"
                   className="w-full h-full transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
