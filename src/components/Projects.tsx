@@ -258,10 +258,10 @@ export function Projects() {
               <button
                 key={cat}
                 onClick={() => { setActiveFilter(cat); setShowAll(false); }}
-                className={`px-4 py-2 rounded-lg text-sm transition-all duration-300 ${
+                className={`h-10 px-4 rounded-full inline-flex items-center justify-center whitespace-nowrap leading-none text-sm font-medium transition-all duration-300 border focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/60 ${
                   activeFilter === cat
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/30'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'
+                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white border-transparent shadow-md shadow-blue-500/20'
+                    : 'bg-gray-800 text-gray-300 border-gray-700 hover:bg-gray-700 hover:border-gray-600'
                 }`}
               >
                 {cat}
@@ -292,12 +292,12 @@ export function Projects() {
                   <Card className="bg-gray-800 border-gray-700 hover:border-blue-500/50 transition-all duration-300 h-full flex flex-col group hover:shadow-lg hover:shadow-blue-500/20">
                     <div className="relative h-44 overflow-hidden rounded-t-lg">
                       {project.featured && (
-                        <div className="absolute top-3 right-3 z-10 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-2.5 py-1 rounded-full text-xs flex items-center gap-1">
-                          <Star size={10} fill="currentColor" />
+                        <div className="absolute top-3 right-3 z-10 h-7 px-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-medium leading-none inline-flex items-center gap-1.5 shadow-md ring-1 ring-white/20">
+                          <Star size={12} fill="currentColor" className="shrink-0" />
                           Featured
                         </div>
                       )}
-                      <span className="absolute top-3 left-3 z-10 bg-gray-900/80 backdrop-blur-sm text-gray-300 px-2 py-0.5 rounded text-xs">
+                      <span className="absolute top-3 left-3 z-10 h-7 px-3 rounded-full bg-gray-900/80 backdrop-blur-sm text-gray-200 text-xs font-medium leading-none inline-flex items-center ring-1 ring-white/10">
                         {project.year}
                       </span>
                       <ImageWithFallback

@@ -2,89 +2,106 @@ import { motion } from 'motion/react';
 import { Briefcase, GraduationCap, Calendar, MapPin, ArrowRight } from 'lucide-react';
 import { Badge } from './ui/badge';
 
-export function Experience() {
-  const timeline = [
-    {
-      type: 'work',
-      title: 'Junior Full-Stack Developer',
-      organization: 'Hyperdim Innovation (Pte) Ltd',
-      location: 'Singapore (Remote)',
-      period: 'Aug 2025 – Present',
-      description: 'Building and maintaining multiple production-grade full-stack platforms for a Singapore-based tech company.',
-      achievements: [
-        'HyperGeo-AGS (2026) — Offline Windows app for geotechnical engineers to view, print & export AGS3/AGS4 data; custom AGS parser, SQLite cache, and AI suggestions (Python, FastAPI, pywebview, SQLite, Jinja2, PyInstaller, pytest)',
-        'HyperInspect Pro (2026) — Multi-tenant field inspection platform with JWT auth, map-based missions, billing, and GitHub Actions CI/CD (React 19, TypeScript, Vite, FastAPI, PostgreSQL, Docker)',
-        'MentorXync (2026) — AI-powered coaching platform with Gemini-assisted mentor replies, Stripe/HitPay payments, and Docker deployment on Google Cloud Run (Next.js, TypeScript, FastAPI, PostgreSQL)',
-        'InvoiceX (2026) — Full-stack invoice management platform with real-time sync, Firebase auth, deployed on Google Cloud Run (React, Node.js, Express, SQLite, Docker)',
-        'Official Hyperdim website (2025) — Company website with AI customer-service agent, deployed on Google Cloud (React, TypeScript, Tailwind CSS)',
-        'e-Kitchen (2025) — E-commerce platform linking 60+ local farmers to customers with Google OAuth (React, TypeScript, FastAPI, MSSQL)',
-        'Ceylon My Dream (2025) — Tourist management system for bookings and tours (React, TypeScript, Python)',
-        'Velora Elders-care Website (2025) — Accessible, easy-to-navigate elder-care website (React, TypeScript, CSS)'
-      ],
-      technologies: ['React', 'Next.js', 'TypeScript', 'Node.js', 'FastAPI', 'Python', 'PostgreSQL', 'Docker', 'Firebase', 'Google Cloud', 'AI Integration', 'pytest']
-    },
-    {
-      type: 'work',
-      title: 'Intern Software Engineer',
-      organization: 'SLT Mobitel',
-      location: 'Colombo, Sri Lanka',
-      period: 'Feb 2025 – Aug 2025',
-      description: 'Developed the official MySLT Web Portal to improve customer experience and engagement for Sri Lanka\'s national telecom provider.',
-      achievements: [
-        'Developed the official MySLT Web Portal for improved user experience and customer engagement',
-        'Utilized React and TypeScript for frontend development with modern component architecture',
-        'Collaborated with backend teams for seamless API integration',
-        'Learned industry-grade coding standards and enterprise workflows'
-      ],
-      technologies: ['React', 'TypeScript', 'REST APIs', 'Responsive Design']
-    },
-    {
-      type: 'education',
-      title: 'MSc in Artificial Intelligence',
-      organization: 'Kingston University',
-      location: 'London, United Kingdom',
-      period: '2026 (Reading)',
-      description: 'Currently reading for a Master\'s degree in Artificial Intelligence, deepening expertise in ML, deep learning, and AI-powered application development.',
-      achievements: [
-        'Focus on machine learning, neural networks, and AI system design',
-        'Applying AI knowledge to real-world projects (Google Gemini integration in MentorXync)',
-        'Bridging AI theory with full-stack engineering practice'
-      ],
-      technologies: ['Machine Learning', 'Deep Learning', 'Python', 'Data Science', 'AI Systems']
-    },
-    {
-      type: 'education',
-      title: 'Bachelor of Information Technology (Hons)',
-      organization: 'ESOFT Metro Campus',
-      location: 'Bambalapitiya, Sri Lanka',
-      period: '2021 – 2026',
-      description: 'Specializing in Software Engineering. Completed all coursework; awaiting graduation.',
-      achievements: [
-        'Relevant coursework: OOP, System Analysis & Design, Web Application Development',
-        'Cloud Application Development, Database Systems, Agile Software Development',
-        'Data Structures & Algorithms, Advanced Web Technologies, AI, Data Science',
-        'Hands-on projects in web, mobile, and cloud development'
-      ],
-      technologies: ['Software Engineering', 'Web Development', 'Cloud Computing', 'Data Science']
-    },
-    {
-      type: 'education',
-      title: 'Diploma in Information Technology',
-      organization: 'ESOFT Metro Campus',
-      location: 'Bambalapitiya, Sri Lanka',
-      period: '2020',
-      description: 'Foundation diploma covering core IT disciplines and programming fundamentals.',
-      achievements: [
-        'Fundamentals of Programming, Computer Systems, OOP, Database Systems',
-        'Web Application Development, Cloud Application Development',
-        'IT Infrastructure and Agile Software Development'
-      ],
-      technologies: ['Programming Fundamentals', 'Databases', 'Web Development', 'IT Infrastructure']
-    }
-  ];
+const timeline = [
+  {
+    type: 'work',
+    title: 'Junior Full-Stack Developer',
+    organization: 'Hyperdim Innovation (Pte) Ltd',
+    location: 'Singapore (Remote)',
+    period: 'Aug 2025 – Present',
+    description: 'Building and maintaining multiple production-grade full-stack platforms for a Singapore-based tech company.',
+    achievements: [
+      'HyperGeo-AGS (2026) — Offline Windows app for geotechnical engineers to view, print & export AGS3/AGS4 data; custom AGS parser, SQLite cache, and AI suggestions (Python, FastAPI, pywebview, SQLite, Jinja2, PyInstaller, pytest)',
+      'HyperInspect Pro (2026) — Multi-tenant field inspection platform with JWT auth, map-based missions, billing, and GitHub Actions CI/CD (React 19, TypeScript, Vite, FastAPI, PostgreSQL, Docker)',
+      'MentorXync (2026) — AI-powered coaching platform with Gemini-assisted mentor replies, Stripe/HitPay payments, and Docker deployment on Google Cloud Run (Next.js, TypeScript, FastAPI, PostgreSQL)',
+      'InvoiceX (2026) — Full-stack invoice management platform with real-time sync, Firebase auth, deployed on Google Cloud Run (React, Node.js, Express, SQLite, Docker)',
+      'Official Hyperdim website (2025) — Company website with AI customer-service agent, deployed on Google Cloud (React, TypeScript, Tailwind CSS)',
+      'e-Kitchen (2025) — E-commerce platform linking 60+ local farmers to customers with Google OAuth (React, TypeScript, FastAPI, MSSQL)',
+      'Ceylon My Dream (2025) — Tourist management system for bookings and tours (React, TypeScript, Python)',
+      'Velora Elders-care Website (2025) — Accessible, easy-to-navigate elder-care website (React, TypeScript, CSS)'
+    ],
+    technologies: ['React', 'Next.js', 'TypeScript', 'Node.js', 'FastAPI', 'Python', 'PostgreSQL', 'Docker', 'Firebase', 'Google Cloud', 'AI Integration', 'pytest']
+  },
+  {
+    type: 'work',
+    title: 'Intern Software Engineer',
+    organization: 'SLT Mobitel',
+    location: 'Colombo, Sri Lanka',
+    period: 'Feb 2025 – Aug 2025',
+    description: 'Developed the official MySLT Web Portal to improve customer experience and engagement for Sri Lanka\'s national telecom provider.',
+    achievements: [
+      'Developed the official MySLT Web Portal for improved user experience and customer engagement',
+      'Utilized React and TypeScript for frontend development with modern component architecture',
+      'Collaborated with backend teams for seamless API integration',
+      'Learned industry-grade coding standards and enterprise workflows'
+    ],
+    technologies: ['React', 'TypeScript', 'REST APIs', 'Responsive Design']
+  },
+  {
+    type: 'education',
+    title: 'MSc in Artificial Intelligence',
+    organization: 'Kingston University',
+    location: 'London, United Kingdom',
+    period: '2026 (Reading)',
+    description: 'Currently reading for a Master\'s degree in Artificial Intelligence, deepening expertise in ML, deep learning, and AI-powered application development.',
+    achievements: [
+      'Focus on machine learning, neural networks, and AI system design',
+      'Applying AI knowledge to real-world projects (Google Gemini integration in MentorXync)',
+      'Bridging AI theory with full-stack engineering practice'
+    ],
+    technologies: ['Machine Learning', 'Deep Learning', 'Python', 'Data Science', 'AI Systems']
+  },
+  {
+    type: 'education',
+    title: 'Bachelor of Information Technology (Hons)',
+    organization: 'ESOFT Metro Campus',
+    location: 'Bambalapitiya, Sri Lanka',
+    period: '2021 – 2026',
+    description: 'Specializing in Software Engineering. Completed all coursework; awaiting graduation.',
+    achievements: [
+      'Relevant coursework: OOP, System Analysis & Design, Web Application Development',
+      'Cloud Application Development, Database Systems, Agile Software Development',
+      'Data Structures & Algorithms, Advanced Web Technologies, AI, Data Science',
+      'Hands-on projects in web, mobile, and cloud development'
+    ],
+    technologies: ['Software Engineering', 'Web Development', 'Cloud Computing', 'Data Science']
+  },
+  {
+    type: 'education',
+    title: 'Diploma in Information Technology',
+    organization: 'ESOFT Metro Campus',
+    location: 'Bambalapitiya, Sri Lanka',
+    period: '2020',
+    description: 'Foundation diploma covering core IT disciplines and programming fundamentals.',
+    achievements: [
+      'Fundamentals of Programming, Computer Systems, OOP, Database Systems',
+      'Web Application Development, Cloud Application Development',
+      'IT Infrastructure and Agile Software Development'
+    ],
+    technologies: ['Programming Fundamentals', 'Databases', 'Web Development', 'IT Infrastructure']
+  }
+];
 
+type Entry = (typeof timeline)[number];
+
+const workItems = timeline.filter((t) => t.type === 'work');
+const eduItems = timeline.filter((t) => t.type === 'education');
+
+function TimelineSection({
+  id,
+  bg,
+  title,
+  subtitle,
+  items,
+}: {
+  id: string;
+  bg: string;
+  title: string;
+  subtitle: string;
+  items: Entry[];
+}) {
   return (
-    <section id="experience" className="py-20 bg-gray-800 relative">
+    <section id={id} className={`py-20 ${bg} relative`}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -94,20 +111,16 @@ export function Experience() {
           className="max-w-5xl mx-auto"
         >
           <div className="text-center mb-12">
-            <h2 className="text-white mb-4">Experience & Education</h2>
+            <h2 className="text-white mb-4">{title}</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6" />
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              My professional journey — from Sri Lanka to Singapore and the UK
-            </p>
+            <p className="text-gray-300 max-w-2xl mx-auto">{subtitle}</p>
           </div>
 
-          {/* Timeline */}
           <div className="relative">
-            {/* Vertical line */}
             <div className="absolute left-6 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-purple-600" />
 
             <div className="space-y-10">
-              {timeline.map((item, index) => (
+              {items.map((item, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -30 }}
@@ -183,5 +196,26 @@ export function Experience() {
         </motion.div>
       </div>
     </section>
+  );
+}
+
+export function Experience() {
+  return (
+    <>
+      <TimelineSection
+        id="experience"
+        bg="bg-gray-800"
+        title="Experience"
+        subtitle="Where I've worked — from Sri Lanka to Singapore"
+        items={workItems}
+      />
+      <TimelineSection
+        id="education"
+        bg="bg-gray-900"
+        title="Education"
+        subtitle="Where I've studied — from Colombo to the UK"
+        items={eduItems}
+      />
+    </>
   );
 }
